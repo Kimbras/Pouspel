@@ -1,0 +1,46 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: #fff;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 3em;
+}
+
+.midden{
+    display: flex;
+    justify-content: center;
+}
+
+#pou{
+    width: 30em;
+}
+
+.navigatie{
+    width: 3em;
+}
+
+.levels{
+    width: 4em;
+}
+
+.levelsplaats{
+    margin: 2em 1em 1em 55em;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 2em 2em 2em 2em;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.elementen{
+    width: 7em;
+    margin: 0em 1em 0em 1em;
+}
