@@ -18,10 +18,22 @@ h1{
 
 #pou{
     width: 30em;
+    transform: translateX(-15em);
 }
 
-.navigatie{
+#pouKaracter{
+    width: 30em;
+    transform:translateX(15em);
+}
+
+.navigatieVerbergen{
     width: 3em;
+    display: none;
+}
+
+.navigatieShow{
+    width: 3em;
+    display: block;
 }
 
 .levels{
@@ -40,7 +52,9 @@ h1{
     font-weight: bolder;
 }
 
+
 .elementen{
     width: 7em;
     margin: 0em 1em 0em 1em;
+    cursor: pointer;
 }

@@ -36,7 +36,7 @@ const zeepKnop = document.querySelector("#zeep");
 let pouArray = ['normale.png','vies.png','viezer.png']
 let statusPou = 0;
 document.querySelector("#pou").src = 'img/karacters/'+pouArray[statusPou];
- 
+
 function pouSchoon(){
     statusPou = statusPou - 1;
     if (statusPou < 0){
@@ -97,3 +97,22 @@ function GaanSlapen(){
 
 
 slaapKnop.addEventListener("click", GaanSlapen);
+
+// kledingkast
+//terug en verder knop in beeld
+
+    const kledingKnop = document.querySelector("#kledingKnop");
+    const kledingKnopTerug = document.querySelector("#terugKnop").classList;
+    const kledingKnopVerder = document.querySelector("#verderKnop").classList;
+
+    kledingKnopTerug.add("navigatieVerbergen");
+    kledingKnopVerder.add("navigatieVerbergen");
+    
+    function kledingKnoppenTonen(){
+        kledingKnopTerug.add("navigatieShow");
+        kledingKnopVerder.add("navigatieShow");
+        console.log("check")
+    }
+
+    kledingKnop.addEventListener("click", kledingKnoppenTonen);
+    
