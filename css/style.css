@@ -16,14 +16,24 @@ h1{
     justify-content: center;
 }
 
-#pou{
+.Wakker{
+    z-index: 0;
     width: 30em;
-    transform: translateX(-15em);
+    transform:translateX(-15em);
 }
 
-#pouKaracter{
+#pou{
     width: 30em;
     transform:translateX(15em);
+    z-index: 1;
+}
+
+.navigatie{
+    width: 3em;
+}
+
+.GaanSlapen{
+    z-index: 2;
 }
 
 .navigatieVerbergen{
@@ -52,9 +62,7 @@ h1{
     font-weight: bolder;
 }
 
-
 .elementen{
     width: 7em;
     margin: 0em 1em 0em 1em;
-    cursor: pointer;
 }

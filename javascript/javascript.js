@@ -111,8 +111,38 @@ slaapKnop.addEventListener("click", GaanSlapen);
     function kledingKnoppenTonen(){
         kledingKnopTerug.add("navigatieShow");
         kledingKnopVerder.add("navigatieShow");
-        console.log("check")
     }
 
-    kledingKnop.addEventListener("click", kledingKnoppenTonen);
-    
+   // function kledingKnoppenVerbergen(){
+   //     kledingKnopTerug.classList.remove("navigatieVerbergen");
+   //     kledingKnopVerder.classList.remove("navigatieVerbergen");
+   // }
+
+   kledingKnop.addEventListener("click", kledingKnoppenTonen);
+   //  andereKnoppen.addEventListener("click", kledingKnoppenVerbergen);
+ 
+ // math random kleding toevoegen
+ 
+ //console.log(randomOutfits);
+ 
+ /* let outfitsArray = ['een.png','twee.png','drie.png','vier.png','vijf.png'];
+ document.querySelector("img").src = 'img/karacters/'+outfitsArray;
+ 
+ function kledingRandomAanpassen(){
+     let randomIndex = Math.floor(Math.random() * outfitsArray.length);
+     let randomOutfit = outfitsArray[randomIndex];
+     document.querySelector("img").src = 'img/karacters/' + randomOutfit;
+ }
+ 
+ kledingKnopVerder.addEventListener("click", kledingRandomAanpassen); */
+ 
+ let outfitsArray = ['een.png', 'twee.png', 'drie.png', 'vier.png', 'vijf.png'];
+ let imgElement = document.querySelector(".Wakker");
+ 
+ function kledingRandomAanpassen() {
+     let randomIndex = Math.floor(Math.random() * outfitsArray.length);
+     let randomOutfit = outfitsArray[randomIndex];
+     imgElement.src = 'img/karacters/' + randomOutfit;
+ }
+ console.log(kledingRandomAanpassen);
+ kledingKnopVerder.addEventListener("click", kledingRandomAanpassen);
