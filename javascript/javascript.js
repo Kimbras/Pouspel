@@ -33,7 +33,7 @@ energieKnop.addEventListener("click", verhoogEnergieLevel);
 // zeep
 // erik heeft geholpen
 const zeepKnop = document.querySelector("#zeep");
-let pouArray = ['normale.png','vies.png','viezer.png']
+let pouArray = ['schoon.png','vies.png','viezer.png']
 let statusPou = 0;
 document.querySelector("#pou").src = 'img/karacters/'+pouArray[statusPou];
 
