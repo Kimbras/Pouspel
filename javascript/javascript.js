@@ -18,6 +18,8 @@ document.body.style.background = "#EFD174";
     const kledingKnop = document.querySelector("#kledingKnop");
     const kledingKnopTerug = document.querySelector("#terugKnop").classList;
     const kledingKnopVerder = document.querySelector("#verderKnop").classList;
+    const knopVerder = document.querySelector("#verderKnop")
+    const knopTerug = document.querySelector("#terugKnop")
 
 //etenknop verhogen en verlagen met timer
 
@@ -116,7 +118,6 @@ function geluid(audiofragment){
         kledingKnopTerug.add("navigatieShow");
         kledingKnopVerder.add("navigatieShow");
     }
-    
 
     function kledingKnoppenVerbergen(){
     kledingKnopTerug.remove("navigatieShow");
@@ -128,33 +129,15 @@ function geluid(audiofragment){
    andereKnoppen.forEach((knop) => knop.addEventListener("click", kledingKnoppenVerbergen))
   
  // math random kleding toevoegen
- 
- let outfitsArray = ['een.png', 'twee.png', 'drie.png', 'vier.png', 'vijf.png'];
- let imgStaat = document.querySelector(".Wakker");
- 
- function kledingRandomAanpassen() {
-     let randomIndex = Math.floor(Math.random() * 4);
-     let randomOutfit = outfitsArray[randomIndex];
-     imgStaat.src = 'img/karacters/' + randomOutfit;
- }
- 
- 
-//  let outfitsArray = ['een.png', 'twee.png', 'drie.png', 'vier.png', 'vijf.png'];
-//  let imgElement = document.querySelector(".Wakker");
 
- 
-//  function kledingVerder(){
-//     outfitsArray = outfitsArray + 1;  
-//     imgElement.src = 'img/karacters/' + randomOutfit;    
-//     }
+let outfitsArray = ['een.png', 'twee.png', 'drie.png', 'vier.png', 'vijf.png'];
+let imgElement = document.querySelector(".Wakker");
 
-//     kledingKnopVerder.addEventListener("click", kledingVerder);
-
-//     function kledingRandomAanpassen() {
-//      let randomIndex = Math.floor(Math.random() * 4);
-//      let randomOutfit = outfitsArray[randomIndex];
-//      imgElement.src = 'img/karacters/' + randomOutfit;
-//  }
+function kledingRandomAanpassen() {
+    let randomIndex = Math.floor(Math.random() * 4); 
+    let randomOutfit = outfitsArray[randomIndex]; 
+    imgElement.src = 'img/karacters/' + randomOutfit;
+    }
 
 //addEventListener
 eetKnop.addEventListener("click", verhoogEetLevel);
@@ -166,7 +149,12 @@ kledingKnop.addEventListener("click", () => {
     geluid(audioKledingkast);
 });
 
+
 slaapKnop.addEventListener("click", () => {
     geluid(audioSlapen)
 });
+
+knopVerder.addEventListener("click", kledingRandomAanpassen);
+knopTerug.addEventListener("click", kledingRandomAanpassen);
+ 
 
