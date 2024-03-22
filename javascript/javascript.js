@@ -67,7 +67,7 @@ function viesWorden(){
         document.body.style.background = "#304a17";
     }
     else if (statusPou === 1){
-        statusPou = 1
+        statusPou = 1;
         document.body.style.background = "#64a12a";
     }
     else if (statusPou <= 0){
