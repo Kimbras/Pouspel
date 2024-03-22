@@ -99,10 +99,12 @@ function GaanSlapen(){
 }
 
 // geluid toevoegen
-// https://pixabay.com/nl/sound-effects/search/klink/
+// https://pixabay.com/nl/sound-effects/search/
 
-let audioKledingkast = new Audio("img/audio/klikgeluidKledingkast.mp3");
-let audioSlapen = new Audio("img/audio/slapen.mp3");
+let audioKledingkast = new Audio("audio/klikgeluidKledingkast.mp3");
+let audioSlapen = new Audio("audio/slapen.mp3");
+let audioEten = new Audio("audio/eten.mp3");
+let audioEnergie = new Audio("audio/drinken.mp3");
 
 function geluid(audiofragment){
     audiofragment.play();
@@ -140,15 +142,23 @@ function kledingRandomAanpassen() {
     }
 
 //addEventListener
-eetKnop.addEventListener("click", verhoogEetLevel);
-energieKnop.addEventListener("click", verhoogEnergieLevel);
+eetKnop.addEventListener("click", () => {
+    geluid(audioEten)
+    verhoogEetLevel();
+});
+
+energieKnop.addEventListener("click", () => {
+    verhoogEnergieLevel();
+    geluid(audioEnergie);
+});
+
 zeepKnop.addEventListener("click", pouSchoon);
 slaapKnop.addEventListener("click", GaanSlapen);
+
 kledingKnop.addEventListener("click", () => {
     kledingKnoppenTonen();
     geluid(audioKledingkast);
 });
-
 
 slaapKnop.addEventListener("click", () => {
     geluid(audioSlapen)
